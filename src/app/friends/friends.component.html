@@ -1,0 +1,9 @@
+<h2>These are my friends</h2>
+<!-- <input type="text" (input)="getFriendName($event)" />
+<input type="text" [(ngModel)]="newFriendName" />
+<br />
+<br />
+<p>{{ newFriendName }}</p> -->
+<!-- <button [disabled]="!isBtnDisabled" (click)="addFriend()">Add Friend</button> -->
+<app-friends-form (friendAdded)="addedFriend($event)"></app-friends-form>
+<app-friend *ngFor="let friend of data" [friend]="friend"></app-friend>
