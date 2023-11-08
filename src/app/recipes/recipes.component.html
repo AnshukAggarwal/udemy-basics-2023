@@ -1,0 +1,9 @@
+<div class="recipes">
+  <app-recipe-list
+    (recipeSelected)="onRecipeSelected($event)"
+  ></app-recipe-list>
+  <app-recipe-details
+    *ngIf="!isObjectEmpty(selectedRecipe)"
+    [data]="selectedRecipe"
+  ></app-recipe-details>
+</div>
